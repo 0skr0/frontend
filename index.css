@@ -1,0 +1,24 @@
+.bg-mynav {
+    background-color: rgb(189, 234, 234);
+}
+
+body {
+    font-size: 1.25;
+    background-color: antiquewhite;
+}
+
+.container {
+    background-color: aliceblue;
+}
+
+.table {
+    padding: 15px;
+}
+
+.t-body {
+    background-color: azure;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}

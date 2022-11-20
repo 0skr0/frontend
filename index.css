@@ -1,9 +1,12 @@
+* {
+    font-size: calc(60% + 0.8vmin);
+}
+
 .bg-mynav {
     background-color: rgb(189, 234, 234);
 }
 
 body {
-    font-size: 1.25;
     background-color: antiquewhite;
 }
 
@@ -11,7 +14,25 @@ body {
     background-color: aliceblue;
 }
 
+.fo-in {
+    width: 20rem;
+    position: relative;
+    padding: 0.2rem;
+}
+
+.me-2 {
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block; 
+    position: absolute; 
+    right: 0.2rem;
+    bottom: 0.2rem;
+}
+
 .table {
+    font-size: 1.5rem;
     padding: 15px;
 }
 
@@ -21,4 +42,64 @@ body {
 
 .navbar-brand {
     font-weight: bold;
+}
+
+.box-cz {
+    background-color: azure;
+    position: relative;
+}
+
+.clock-zone {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.c-time {
+    color: rgb(4, 72, 72); 
+    font-size: 9.375rem;
+}
+
+.c-date {
+    color: rgb(4, 72, 72); 
+    font-size: 1.875rem; 
+    position: absolute;
+    right: 1rem;
+    bottom: 0.2rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .clock-zone {
+        max-width: 40rem;
+    }
+    .c-time {
+        font-size: 9.375rem;
+    }
+    .c-date {
+        font-size: 1.875rem;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 959px) {
+    .clock-zone {
+        max-width: 26.6rem;
+    }
+    .c-time {
+        font-size: 6.25rem;
+    }
+    .c-date {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .clock-zone {
+        max-width: 13.3rem;
+    }
+    .c-time {
+        font-size: 3.125rem;
+    }
+    .c-date {
+        font-size: 0.625rem;
+    }
 }

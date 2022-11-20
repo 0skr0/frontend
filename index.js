@@ -13,6 +13,8 @@ function run() {
     fetch('http://13.230.193.163:3000/times')
     .then(response => response.json())
     .then(data => show(data))
+    endloopId = SaWaRuDo
+    clearInterval(endloopId);
 }
 function submitsearch() {
     fetch(`http://13.230.193.163:3000/time/${String(formInput.value)}`)
@@ -21,25 +23,14 @@ function submitsearch() {
         if(String(data) === '') {
             alert(`Error: ไม่พบประเทศที่ระบุ '${formInput.value}'`)
         }else {
+            endloopId = SaWaRuDo
             clearInterval(endloopId);
             load(data)
         }
         formInput.value = ''
     })
 }
-formInput.addEventListener('change', () => {
-    if(formInput.value === '') {
-        endloopId = 0
-    }else{
-        endloopId = SaWaRuDo
-    }
-    submitsearch()
-})
 home.addEventListener('click', () => {
-    endloopId = SaWaRuDo
-    clearInterval(endloopId);
-    otc_clock.innerHTML = ''
-    otc_day.innerHTML = ''
     run()
 })
 home.addEventListener('mouseover', () => {
@@ -49,14 +40,11 @@ home.addEventListener('mouseout', () => {
     home.style.color = 'black'
 })
 btn.addEventListener('click', () => {
-    if(formInput.value === '') {
-        endloopId = 0
-    }else{
-        endloopId = SaWaRuDo
-    }
     submitsearch()
 })
 function show(data) {
+    otc_clock.innerHTML = ''
+    otc_day.innerHTML = ''
     f_table.innerHTML = ''
     let text = document.querySelector('#t');
     text.innerHTML = ''
